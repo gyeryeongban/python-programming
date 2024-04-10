@@ -30,7 +30,7 @@ cappuNum = int(input("카푸치노 판매 개수: "))
 sum = (ameriPri * ameriNum) + (cafelaPri * cafelaNum) + (cappuPri * cappuNum)
 print("총 매출은 {}입니다.".format(sum))
 
-# 도전 문제
+# 도전문제
 total = 100000
 
 if sum > total:
@@ -43,7 +43,7 @@ f = int(input("화씨 온도: "))
 c = (f - 32) * 5/9
 print("섭씨 온도: ", c)
 
-# 도전 문제
+# 도전문제
 c = int(input("섭씨 온도: "))
 f = c * 9/5 + 32
 print("화씨 온도: ", f)
@@ -66,7 +66,7 @@ coin100 = change // 100
 print("500원 동전의 개수: ", coin500)
 print("100원 동전의 개수: ", coin100)
 
-# 도전 문제
+# 도전문제
 change = change % 100
 coin50 = change // 50
 change = change % 50
@@ -85,11 +85,11 @@ print(pi)
 
 # 복합 연산자
 x = 1000
-print("초기 값 X = ", x)
+print("초기 값 x = ", x)
 x += 2
-print("x += 2 후의 X =", x)
+print("x += 2 후의 x =", x)
 x -= 2
-print("x -= 2 후의 X =", x)
+print("x -= 2 후의 x =", x)
 
 # 괄호의 사용
 print(10 + 20 / 2)
