@@ -38,7 +38,7 @@ else:
     print("뒷면입니다.")
 print("게임이 종료되었습니다.")
 
-# if-elif-else 문
+# if-elif-else문
 num = int(input("정수를 입력하시오: "))
 
 if num > 0:
