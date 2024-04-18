@@ -50,3 +50,108 @@ while num <= 10:
     sum += num
     num += 1 # 숫자를 1씩 늘려줘야 함
 print("합계는", sum)
+
+# 중첩 반복문
+for i in range(5):
+    for j in range(10):
+        print("*", end=" ")
+    print("")
+
+for j in range(1, 6):
+    print("* " * j)
+print("")
+
+# 별 찍기
+for i in range(4):
+    print(" " * (4 - (i + 1)), end="")
+    print("* " * (i + 1))
+
+# 무한 반복문
+sign = True
+
+while sign:
+    light = input("신호등 색상을 입력하시오: ")
+    if light == "blue":
+        sign = False
+
+print("전진!")
+
+# break와 continue
+while True:
+    light = input("신호등 색상을 입력하시오: ")
+    if light == "blue":
+        break
+print("전진!")
+
+for n in range(10):
+    if n % 2 == 0:
+        continue
+    print(n)
+
+# Lab: 구구단 출력
+# for
+dan = int(input("원하는 단은: "))
+
+for i in range(1, 10):
+    print("{} * {} = {}".format(dan, i, dan * i))
+
+# while
+dan = int(input("원하는 단은: "))
+i = 1
+
+while i <= 9:
+    print("%s * %s = %s" % (dan, i , dan * i))
+    i = i + 1
+
+# 도전문제
+for i in range(1, 10):
+    for j in range(1, 10):
+        print("%s * %s = %s" % (i, j, i * j))
+    print("")
+
+# Lab: 범인 찾기 게임
+import random
+score = 0
+
+while True:
+    room = random.randint(1, 3)
+    choice = int(input("방 번호를 입력하시오: "))
+
+    if room == choice:
+        print("범인 체포!")
+        score += 100
+        break
+
+    elif choice > 3:
+        print(n, "번 방은 없습니다.")
+    
+    else:
+        print("범인이 없습니다.")
+        score -= 10
+
+print("게임 종료")
+print("점수:", score, "점")
+
+# Lab: 약수 구하기
+import random
+
+tries = 1
+guess = 0
+answer = random.randint(1, 100)
+
+print("1부터 100 사이의 숫자를 맞추시오")
+guess = int(input("숫자를 입력하시오: "))
+
+while guess != answer:
+    tries = tries + 1
+    
+    if guess < answer:
+        print("낮음!")
+    
+    elif guess > answer:
+        print("높음!")
+    
+    guess = int(input("숫자를 입력하시오: "))
+
+if guess == answer:
+    print("축하합니다. 시도 횟수 =", tries)
